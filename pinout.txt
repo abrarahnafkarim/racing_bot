@@ -1,0 +1,39 @@
+To connect four motors to a relay module for controlling a car, you'll need to consider the wiring for both the motors and the relay module. Here's a basic guide on how to connect them:
+
+Motor Connections:
+
+Assuming you have four motors, typically arranged as two pairs (one pair for each side of the car), you'll connect each motor to a relay channel. Each motor typically has two terminals: positive (+) and negative (-).
+
+Connect the positive terminal of each motor to the normally open (NO) terminal of a relay channel.
+Connect the negative terminal of each motor to a common ground (GND).
+Relay Module Connections:
+
+A relay module consists of multiple relays, each with a common (COM) terminal and a normally open (NO) terminal.
+
+Connect the common (COM) terminal of each relay channel to a power source suitable for your motors (e.g., battery positive).
+Connect the normally open (NO) terminal of each relay channel to the positive terminal of a motor.
+Connect all the relay module's ground (GND) terminals to the ground (GND) of the power supply.
+Here's a basic schematic illustrating the connections:
++-------------------------+        +---------------------+
+|                         |        |                     |
+|     Motor 1 (+)---------|--------|NO (Relay Channel 1)|
+|     Motor 1 (-)---------|---+----|                     |
+|                         |   |    +---------------------+
+|                         |   |
+|     Motor 2 (+)---------|---|----+ NO (Relay Channel 2)
+|     Motor 2 (-)---------|---|----|
+|                         |   |    +---------------------+
+|                         |   |
+|     Motor 3 (+)---------|---|----+ NO (Relay Channel 3)
+|     Motor 3 (-)---------|---|----|
+|                         |   |    +---------------------+
+|                         |   |
+|     Motor 4 (+)---------|---|----+ NO (Relay Channel 4)
+|     Motor 4 (-)---------|---|----|
+|                         |   |    +---------------------+
++-------------------------+   |    |        Power        |
+                               +----|      Supply       |
+                                    +---------------------+
+Ensure that the power supply can provide enough current to drive all the motors simultaneously without overloading. Additionally,
+check the voltage ratings of both the motors and the relay module to ensure compatibility. Always refer to the datasheets and
+documentation provided with your components for accurate wiring instructions.
